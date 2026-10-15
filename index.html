@@ -93,16 +93,16 @@ header.solid{background:rgba(247,242,235,.88);backdrop-filter:blur(14px);-webkit
 @keyframes rot{to{transform:rotate(360deg)}}
 .seal-dot{position:absolute;left:-58px;bottom:70px;width:132px;height:132px;display:grid;place-items:center;pointer-events:none}
 .seal-dot i{width:46px;height:46px;border-radius:50%;background:var(--blush);display:grid;place-items:center;font-family:var(--f-display);font-style:italic;font-size:1.3rem}
-.leaf{position:absolute;pointer-events:none;mix-blend-mode:multiply;opacity:.85;will-change:transform}
-.leaf.l1{width:260px;right:-60px;top:90px}
-.leaf.l2{width:200px;left:-70px;bottom:-30px;transform:scaleX(-1)}
+.leaf{position:absolute;pointer-events:none;opacity:.9;will-change:transform;z-index:2}
+.leaf.l1{width:110px;right:-46px;top:40px}
+.leaf.l2{width:90px;left:-40px;bottom:180px;transform:scaleX(-1)}
 @media (max-width:900px){
   .hero{padding-top:calc(108px + env(safe-area-inset-top,0px));padding-bottom:40px}
   .hero-grid{grid-template-columns:1fr;gap:44px}
   .hero-photo{justify-self:center;max-width:360px;width:84%}
   .seal,.seal-dot{left:-34px;bottom:40px;width:104px;height:104px}
   .seal-dot i{width:38px;height:38px;font-size:1.1rem}
-  .leaf.l1{width:170px;right:-50px;top:auto;bottom:38%}
+  .leaf.l1{width:80px;right:-30px;top:10px}.leaf.l2{width:70px;left:-26px;bottom:160px}
   .actions .btn{flex:1 1 auto}
 }
 
@@ -285,11 +285,11 @@ footer{padding-block:34px calc(34px + env(safe-area-inset-bottom,0px));border-to
         </div>
       </div>
       <div class="hero-photo">
-        <img class="leaf l1" data-s=".18" src="https://images.unsplash.com/photo-1678902439117-ea4268c7661b?auto=format&fit=crop&w=500&q=70" alt="" aria-hidden="true">
+        <svg class="leaf l1" data-s=".18" viewBox="0 0 120 260" aria-hidden="true"><path d="M60 255 C58 190 66 120 52 10" fill="none" stroke="#8b9a7c" stroke-width="2.2" stroke-linecap="round"/><g fill="#8b9a7c" opacity=".85"><ellipse cx="40" cy="215" rx="20" ry="9" transform="rotate(-35 40 215)"/><ellipse cx="80" cy="190" rx="20" ry="9" transform="rotate(35 80 190)"/><ellipse cx="42" cy="160" rx="19" ry="8.5" transform="rotate(-35 42 160)"/><ellipse cx="80" cy="135" rx="18" ry="8" transform="rotate(35 80 135)"/><ellipse cx="40" cy="105" rx="17" ry="7.5" transform="rotate(-35 40 105)"/><ellipse cx="74" cy="80" rx="15" ry="7" transform="rotate(35 74 80)"/><ellipse cx="44" cy="52" rx="13" ry="6" transform="rotate(-35 44 52)"/><ellipse cx="64" cy="28" rx="10" ry="5" transform="rotate(35 64 28)"/></g></svg>
         <div class="frame"><img id="heroImg" src="https://images.unsplash.com/photo-1564141696939-9eb6e957ccfc?auto=format&fit=crop&w=900&h=1200&q=80" alt="Mulher com cabelos cacheados volumosos" fetchpriority="high"></div>
         <svg class="seal" viewBox="0 0 132 132" aria-hidden="true"><defs><path id="circ" d="M66 66 m-52 0 a52 52 0 1 1 104 0 a52 52 0 1 1 -104 0"/></defs><circle cx="66" cy="66" r="64" fill="var(--ivory)"/><text><textPath href="#circ">beauty · wellness · autoestima · </textPath></text></svg>
         <div class="seal-dot" aria-hidden="true"><i>RM</i></div>
-        <img class="leaf l2" data-s="-.12" src="https://images.unsplash.com/photo-1533038590840-1cde6e668a91?auto=format&fit=crop&w=400&q=70" alt="" aria-hidden="true">
+        <svg class="leaf l2" data-s="-.12" viewBox="0 0 120 260" aria-hidden="true"><path d="M60 255 C58 190 66 120 52 10" fill="none" stroke="#8b9a7c" stroke-width="2.2" stroke-linecap="round"/><g fill="#8b9a7c" opacity=".85"><ellipse cx="40" cy="215" rx="20" ry="9" transform="rotate(-35 40 215)"/><ellipse cx="80" cy="190" rx="20" ry="9" transform="rotate(35 80 190)"/><ellipse cx="42" cy="160" rx="19" ry="8.5" transform="rotate(-35 42 160)"/><ellipse cx="80" cy="135" rx="18" ry="8" transform="rotate(35 80 135)"/><ellipse cx="40" cy="105" rx="17" ry="7.5" transform="rotate(-35 40 105)"/><ellipse cx="74" cy="80" rx="15" ry="7" transform="rotate(35 74 80)"/><ellipse cx="44" cy="52" rx="13" ry="6" transform="rotate(-35 44 52)"/><ellipse cx="64" cy="28" rx="10" ry="5" transform="rotate(35 64 28)"/></g></svg>
       </div>
     </div>
   </section>
@@ -386,7 +386,7 @@ footer{padding-block:34px calc(34px + env(safe-area-inset-bottom,0px));border-to
         </div>
       </div>
       <div class="box insta" data-reveal>
-        <img src="https://images.unsplash.com/photo-1533038590840-1cde6e668a91?auto=format&fit=crop&w=400&q=60" alt="" aria-hidden="true">
+        
         <div>
           <span class="over" style="color:#dfe6d8">Instagram</span>
           <p class="big" style="margin:12px 0 12px">@studioraquelmelo</p>
