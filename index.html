@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Studio Raquel Melo · Beauty &amp; Wellness · Itabirinha – MG</title>
+<meta name="description" content="Terapia capilar, head spa, nail, massagem e make em Itabirinha – MG. Studio Raquel Melo: autoestima e bem-estar. Agende pelo WhatsApp.">
+<meta property="og:title" content="Studio Raquel Melo · Beauty & Wellness">
+<meta property="og:description" content="Terapia capilar, head spa, nail, massagem e make em Itabirinha – MG.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1564141696939-9eb6e957ccfc?auto=format&fit=crop&w=1200&h=630&q=80">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#f7f2eb">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%23f7f2eb'/%3E%3Ctext x='32' y='43' font-family='Georgia' font-style='italic' font-size='30' text-anchor='middle' fill='%2356654b'%3ERM%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://images.unsplash.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap">
+<link rel="preload" as="image" href="https://images.unsplash.com/photo-1564141696939-9eb6e957ccfc?auto=format&fit=crop&w=900&h=1200&q=80" fetchpriority="high">
+<style>
+/* Conceito: um spa de cabelos — papel cor de linho, verde-sálvia de folhas, toque rosado de pele; tipografia editorial e movimentos lentos, como respirar */
+:root{
+  --ivory:#f7f2eb;     /* fundo */
+  --linen:#efe6da;     /* superfícies */
+  --sage:#8b9a7c;      /* acento */
+  --sage-d:#56654b;
+  --blush:#e9c9bd;     /* pele */
+  --cocoa:#3a2a23;     /* texto */
+  --muted:#7a6a60;
+  --line:rgba(58,42,35,.14);
+  --f-display:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+  --f-body:"Jost",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --ease:cubic-bezier(.22,.7,.2,1);
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;overflow-x:clip}
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+body{margin:0;background:var(--ivory);color:var(--cocoa);font-family:var(--f-body);font-weight:400;font-size:17px;line-height:1.7;overflow-x:clip;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3,h4{margin:0;font-family:var(--f-display);font-weight:500;text-wrap:balance;letter-spacing:-.005em}
+.wrap{max-width:1200px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.over{font-weight:500;font-size:.74rem;letter-spacing:.26em;text-transform:uppercase;color:var(--sage-d)}
+:focus-visible{outline:2px solid var(--sage-d);outline-offset:3px;border-radius:6px}
+
+/* ---------- Header ---------- */
+header{position:fixed;top:0;left:0;right:0;z-index:50;padding-top:env(safe-area-inset-top,0px);transition:background .4s,box-shadow .4s}
+header.solid{background:rgba(247,242,235,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:14px;height:78px}
+.logo{text-decoration:none;line-height:1;white-space:nowrap}
+.logo b{display:block;font-family:var(--f-display);font-style:italic;font-weight:500;font-size:1.75rem}
+.logo small{display:block;font-size:.58rem;letter-spacing:.32em;text-transform:uppercase;color:var(--sage-d);margin-top:4px}
+.nav-links{display:flex;gap:30px;list-style:none;margin:0;padding:0}
+.nav-links a{text-decoration:none;font-size:.95rem;color:var(--muted);transition:color .2s;white-space:nowrap}
+.nav-links a:hover{color:var(--cocoa)}
+.menu-btn{display:none;width:46px;height:46px;border-radius:50%;border:1px solid var(--line);background:transparent;color:var(--cocoa);cursor:pointer;place-items:center}
+.menu-btn span,.menu-btn span::before,.menu-btn span::after{display:block;width:18px;height:1.5px;background:currentColor;transition:transform .35s var(--ease),background .2s}
+.menu-btn span{position:relative}.menu-btn span::before,.menu-btn span::after{content:"";position:absolute;left:0}
+.menu-btn span::before{top:-6px}.menu-btn span::after{top:6px}
+.menu-open .menu-btn span{background:transparent}.menu-open .menu-btn span::before{top:0;transform:rotate(45deg)}.menu-open .menu-btn span::after{top:0;transform:rotate(-45deg)}
+.mobile-menu{position:fixed;inset:0;z-index:49;background:var(--linen);display:flex;flex-direction:column;justify-content:center;gap:4px;padding:100px max(28px,env(safe-area-inset-left,0px)) 40px;opacity:0;visibility:hidden;transition:opacity .5s var(--ease),visibility .5s}
+.menu-open .mobile-menu{opacity:1;visibility:visible}
+.mobile-menu a{font-family:var(--f-display);font-style:italic;font-size:2.6rem;text-decoration:none;line-height:1.3}
+@media (max-width:960px){.nav-links{display:none}.menu-btn{display:grid}.nav .btn{display:none}}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 28px;border-radius:999px;border:0;background:var(--cocoa);color:var(--ivory);font-family:var(--f-body);font-weight:500;font-size:.95rem;letter-spacing:.06em;line-height:1.1;text-decoration:none;cursor:pointer;transition:transform .5s var(--ease),background .3s,box-shadow .4s;white-space:nowrap}
+.btn:hover{transform:translateY(-2px);background:#4a372e;box-shadow:0 16px 30px -18px rgba(58,42,35,.7)}
+.btn.sage{background:var(--sage-d);color:#fff}
+.btn.sage:hover{background:#4a5840}
+.btn.line{background:transparent;color:var(--cocoa);box-shadow:inset 0 0 0 1px var(--cocoa)}
+.btn.line:hover{background:var(--cocoa);color:var(--ivory)}
+.btn svg{width:18px;height:18px;flex:none}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;padding-top:calc(130px + env(safe-area-inset-top,0px));padding-bottom:70px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.hero-copy{min-width:0;position:relative;z-index:2}
+.hero h1{font-size:clamp(3rem,7vw,6.2rem);line-height:.95;margin:20px 0 26px}
+.hero h1 i{color:var(--sage-d);font-weight:500}
+.hero h1 .ln{display:block;overflow:hidden;padding-bottom:.06em}
+.hero h1 .ln>span{display:inline-block;animation:up 1.4s var(--ease) both}
+.hero h1 .ln:nth-child(2)>span{animation-delay:.12s}.hero h1 .ln:nth-child(3)>span{animation-delay:.24s}
+@keyframes up{from{transform:translateY(110%)}to{transform:none}}
+.lead{font-size:1.12rem;font-weight:300;color:var(--muted);max-width:29em;margin:0 0 34px}
+.actions{display:flex;flex-wrap:wrap;gap:12px}
+.hero-photo{position:relative;justify-self:end;width:100%;max-width:470px}
+.frame{aspect-ratio:3/4;border-radius:999px 999px 24px 24px;overflow:hidden;background:var(--linen)}
+.frame img{width:100%;height:100%;object-fit:cover;will-change:transform;animation:breathe 1.8s var(--ease) both}
+@keyframes breathe{from{transform:scale(1.15);opacity:.4}to{transform:scale(1.04);opacity:1}}
+.seal{position:absolute;left:-58px;bottom:70px;width:132px;height:132px;animation:rot 26s linear infinite}
+.seal text{font-family:var(--f-body);font-size:11.5px;letter-spacing:3.5px;fill:var(--cocoa);text-transform:uppercase}
+@keyframes rot{to{transform:rotate(360deg)}}
+.seal-dot{position:absolute;left:-58px;bottom:70px;width:132px;height:132px;display:grid;place-items:center;pointer-events:none}
+.seal-dot i{width:46px;height:46px;border-radius:50%;background:var(--blush);display:grid;place-items:center;font-family:var(--f-display);font-style:italic;font-size:1.3rem}
+.leaf{position:absolute;pointer-events:none;mix-blend-mode:multiply;opacity:.85;will-change:transform}
+.leaf.l1{width:260px;right:-60px;top:90px}
+.leaf.l2{width:200px;left:-70px;bottom:-30px;transform:scaleX(-1)}
+@media (max-width:900px){
+  .hero{padding-top:calc(108px + env(safe-area-inset-top,0px));padding-bottom:40px}
+  .hero-grid{grid-template-columns:1fr;gap:44px}
+  .hero-photo{justify-self:center;max-width:360px;width:84%}
+  .seal,.seal-dot{left:-34px;bottom:40px;width:104px;height:104px}
+  .seal-dot i{width:38px;height:38px;font-size:1.1rem}
+  .leaf.l1{width:170px;right:-50px;top:auto;bottom:38%}
+  .actions .btn{flex:1 1 auto}
+}
+
+/* ---------- Faixa ---------- */
+.ribbon{border-block:1px solid var(--line);overflow:hidden;padding-block:20px}
+.ribbon-track{display:flex;width:max-content;will-change:transform}
+.rg{display:flex;align-items:center;gap:40px;padding-right:40px;font-family:var(--f-display);font-style:italic;font-size:clamp(1.6rem,3.4vw,2.6rem);white-space:nowrap;line-height:1.1}
+.rg i{font-style:normal;color:var(--sage);font-size:.6em}
+
+section{padding-block:120px;position:relative}
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:50px}
+.head h2{font-size:clamp(2.6rem,5.6vw,4.4rem);line-height:1;margin-top:14px}
+.head h2 i{color:var(--sage-d)}
+.head p{color:var(--muted);font-weight:300;max-width:26em;margin:0}
+[data-reveal]{transition:transform 1.2s var(--ease),opacity 1.2s var(--ease)}
+.js [data-reveal].pre{transform:translateY(40px)}
+
+/* ---------- Serviços (lista editorial) ---------- */
+.svc{list-style:none;margin:0;padding:0;border-top:1px solid var(--line);position:relative}
+.svc li{border-bottom:1px solid var(--line)}
+.svc a{display:grid;grid-template-columns:1fr 1.1fr auto;gap:24px;align-items:center;padding:26px 6px;text-decoration:none;transition:padding .6s var(--ease),background .6s}
+.svc a:hover{padding-left:22px;background:rgba(233,201,189,.18)}
+.svc h3{font-size:clamp(1.9rem,3.6vw,2.8rem);line-height:1}
+.svc p{margin:0;color:var(--muted);font-weight:300;font-size:.98rem}
+.svc .arrow{width:46px;height:46px;border-radius:50%;box-shadow:inset 0 0 0 1px var(--line);display:grid;place-items:center;transition:background .4s,color .4s,transform .5s var(--ease)}
+.svc a:hover .arrow{background:var(--cocoa);color:var(--ivory);transform:rotate(-45deg)}
+.svc .arrow svg{width:18px;height:18px}
+.svc .thumb{display:none}
+.peek{position:fixed;left:0;top:0;width:240px;aspect-ratio:3/4;border-radius:120px 120px 16px 16px;overflow:hidden;pointer-events:none;z-index:40;opacity:0;transform:translate(-50%,-50%) scale(.8);transition:opacity .35s var(--ease),transform .5s var(--ease);box-shadow:0 30px 50px -24px rgba(58,42,35,.55)}
+.peek.on{opacity:1;transform:translate(-50%,-50%) scale(1)}
+.peek img{width:100%;height:100%;object-fit:cover}
+@media (max-width:820px){
+  .svc a{grid-template-columns:76px 1fr;gap:16px;padding:18px 0}
+  .svc a:hover{padding-left:0}
+  .svc .thumb{display:block;width:76px;height:96px;border-radius:40px 40px 10px 10px;object-fit:cover;grid-row:span 2}
+  .svc .arrow{display:none}
+  .svc h3{font-size:1.75rem}
+  .svc p{font-size:.92rem;line-height:1.5}
+  .peek{display:none}
+}
+
+/* ---------- Ritual (pinned) ---------- */
+.ritual{padding:0;height:330vh;background:var(--linen)}
+.ritual .pin{position:sticky;top:0;height:100vh;height:100svh;display:flex;align-items:center;overflow:hidden;padding-top:78px}
+.r-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;width:100%}
+.r-photos{position:relative;aspect-ratio:4/5;max-height:calc(100svh - 140px);width:100%;max-width:480px;justify-self:center;border-radius:999px 999px 24px 24px;overflow:hidden;background:var(--blush)}
+.r-photos img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.08);transition:opacity 1s var(--ease),transform 1.6s var(--ease)}
+.r-photos img.on{opacity:1;transform:scale(1)}
+.r-copy{min-width:0}
+.r-copy h2{font-size:clamp(2.4rem,5vw,4rem);line-height:1;margin:14px 0 24px}
+.r-copy h2 i{color:var(--sage-d)}
+.r-steps{list-style:none;margin:0;padding:0;display:grid;gap:2px}
+.r-steps li{display:grid;grid-template-columns:48px 1fr;gap:14px;padding:12px 0;border-bottom:1px solid var(--line);opacity:.38;transition:opacity .6s var(--ease)}
+.r-steps li.on{opacity:1}
+.r-steps .n{font-family:var(--f-display);font-style:italic;font-size:1.5rem;color:var(--sage-d);line-height:1.2}
+.r-steps b{display:block;font-family:var(--f-display);font-weight:600;font-size:1.45rem;line-height:1.15}
+.r-steps span{color:var(--muted);font-weight:300;font-size:.95rem;line-height:1.5;display:block}
+.r-note{font-size:.82rem;color:var(--muted);margin-top:16px}
+@media (max-width:900px){
+  .ritual{height:300vh}
+  .r-grid{grid-template-columns:1fr;gap:16px}
+  .r-photos{max-width:300px;max-height:34svh;aspect-ratio:auto;height:34svh;border-radius:150px 150px 16px 16px}
+  .r-copy h2{font-size:2.1rem;margin:8px 0 10px}
+  .r-steps li{padding:7px 0;grid-template-columns:34px 1fr;gap:8px}
+  .r-steps li:not(.cur){display:none}
+  .r-steps li.cur{opacity:1}
+  .r-steps b{font-size:1.3rem}
+  .dots{display:flex!important}
+  .r-note{display:none}
+}
+.dots{display:none;gap:6px;margin-top:12px}
+.dots i{width:22px;height:3px;border-radius:3px;background:var(--line);transition:background .4s}
+.dots i.on{background:var(--sage-d)}
+
+/* ---------- Sobre ---------- */
+.about{display:grid;grid-template-columns:1fr 1.1fr;gap:60px;align-items:center}
+.about .ph{position:relative;aspect-ratio:4/5;border-radius:24px;overflow:hidden;min-width:0}
+.about .ph img{position:absolute;inset:-8% 0;width:100%;height:116%;object-fit:cover;will-change:transform}
+.about h2{font-size:clamp(2.4rem,5vw,4rem);line-height:1;margin:14px 0 22px}
+.about h2 i{color:var(--sage-d)}
+.about p{color:var(--muted);font-weight:300;margin:0 0 16px;max-width:32em}
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:30px}
+.pillars div{border-top:1px solid var(--cocoa);padding-top:14px}
+.pillars b{display:block;font-family:var(--f-display);font-size:1.5rem;font-weight:600;line-height:1.1}
+.pillars span{font-size:.88rem;color:var(--muted);font-weight:300}
+@media (max-width:860px){.about{grid-template-columns:1fr;gap:34px}.about .ph{aspect-ratio:1}.pillars{grid-template-columns:1fr;gap:10px}}
+
+/* ---------- Agendar ---------- */
+.book{background:var(--cocoa);color:var(--ivory);border-radius:36px;padding:60px;display:grid;grid-template-columns:1fr 1.15fr;gap:50px}
+.book h2{font-size:clamp(2.4rem,5vw,3.8rem);line-height:1;margin:14px 0 18px;color:#fff}
+.book h2 i{color:var(--blush)}
+.book .over{color:var(--blush)}
+.book p{color:#cbbdb3;font-weight:300;margin:0}
+.form{display:grid;gap:22px;min-width:0}
+.field label,.field legend{display:block;font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;color:#cbbdb3;margin-bottom:10px;padding:0}
+.field fieldset{border:0;margin:0;padding:0;min-width:0}
+.pick{display:flex;flex-wrap:wrap;gap:8px}
+.pick label{position:relative;cursor:pointer;margin:0;letter-spacing:0;text-transform:none;font-size:.95rem;color:var(--ivory)}
+.pick input{position:absolute;opacity:0;pointer-events:none}
+.pick span{display:inline-block;padding:9px 16px;border-radius:999px;box-shadow:inset 0 0 0 1px rgba(247,242,235,.3);transition:background .3s,color .3s,box-shadow .3s}
+.pick input:checked+span{background:var(--blush);color:var(--cocoa);box-shadow:none}
+.pick input:focus-visible+span{outline:2px solid var(--blush);outline-offset:2px}
+.form input[type=text],.form input[type=date]{width:100%;background:transparent;border:0;border-bottom:1px solid rgba(247,242,235,.35);color:var(--ivory);font-family:var(--f-body);font-size:1.05rem;padding:10px 0;border-radius:0;color-scheme:dark}
+.form input::placeholder{color:#9d8e85}
+.form input:focus{outline:none;border-bottom-color:var(--blush)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.form .btn{background:var(--blush);color:var(--cocoa);justify-self:start}
+.form .btn:hover{background:#f2d6cc}
+.form small{color:#9d8e85;font-size:.82rem}
+@media (max-width:900px){.book{grid-template-columns:1fr;padding:32px 22px;border-radius:26px;gap:30px}.row2{grid-template-columns:1fr}.form .btn{justify-self:stretch}}
+
+/* ---------- Instagram + contato ---------- */
+.contact{display:grid;grid-template-columns:1.1fr 1fr;gap:24px}
+.box{border-radius:28px;padding:36px;background:var(--linen);min-width:0}
+.box h3{font-size:2.2rem;line-height:1.05;margin:10px 0 18px}
+.facts{display:grid;gap:16px;margin-bottom:26px}
+.fact{display:grid;grid-template-columns:42px 1fr;gap:14px;align-items:center}
+.fact .ic{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;box-shadow:inset 0 0 0 1px var(--line);color:var(--sage-d)}
+.fact .ic svg{width:19px;height:19px}
+.fact b{display:block;font-weight:500;line-height:1.3}
+.fact span{color:var(--muted);font-weight:300;font-size:.95rem}
+.copy{font-family:var(--f-body);font-size:.72rem;letter-spacing:.06em;padding:4px 10px;border-radius:999px;border:0;box-shadow:inset 0 0 0 1px var(--line);background:transparent;color:var(--sage-d);cursor:pointer;margin-left:8px;vertical-align:1px}
+.insta{position:relative;overflow:hidden;background:var(--sage-d);color:#fff;display:flex;flex-direction:column;justify-content:space-between;gap:24px}
+.insta .big{font-family:var(--f-display);font-style:italic;font-size:clamp(2.2rem,4.4vw,3.2rem);line-height:1}
+.insta p{margin:0;color:#dfe6d8;font-weight:300}
+.insta .btn{background:#fff;color:var(--sage-d);align-self:flex-start}
+.insta img{position:absolute;right:-40px;bottom:-30px;width:220px;opacity:.22;mix-blend-mode:screen;pointer-events:none}
+@media (max-width:860px){.contact{grid-template-columns:1fr}.box{padding:26px}}
+
+footer{padding-block:34px calc(34px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+.foot{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+
+.wa{position:fixed;z-index:60;right:calc(18px + env(safe-area-inset-right,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 14px 30px -8px rgba(37,211,102,.55);transition:transform .4s var(--ease),opacity .3s}
+.wa:hover{transform:scale(1.07)}
+.wa svg{width:28px;height:28px;fill:#fff}
+.menu-open .wa{opacity:0;pointer-events:none}
+@media (max-width:600px){.wa{width:52px;height:52px;right:calc(14px + env(safe-area-inset-right,0px));bottom:calc(14px + env(safe-area-inset-bottom,0px))}.wa svg{width:25px;height:25px}}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .ritual{height:auto}.ritual .pin{position:relative;height:auto;padding-block:100px}
+  .r-steps li{opacity:1}.r-steps li:not(.cur){display:grid}
+}
+</style>
+</head>
+<body>
+
+<header id="hdr">
+  <div class="wrap nav">
+    <a class="logo" href="#topo" aria-label="Studio Raquel Melo, início"><b>Raquel Melo</b><small>Studio · Beauty &amp; Wellness</small></a>
+    <ul class="nav-links">
+      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#ritual">Head spa</a></li>
+      <li><a href="#studio">O studio</a></li>
+      <li><a href="#agendar">Agendar</a></li>
+    </ul>
+    <a class="btn" href="#agendar">Agendar horário</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menu" aria-expanded="false"><span></span></button>
+  </div>
+</header>
+<nav class="mobile-menu" aria-label="Menu">
+  <a href="#servicos">Serviços</a>
+  <a href="#ritual">Head spa</a>
+  <a href="#studio">O studio</a>
+  <a href="#agendar">Agendar</a>
+  <a class="btn sage" style="align-self:flex-start;margin-top:24px;font-family:var(--f-body)" href="https://wa.me/5533988542194" target="_blank" rel="noopener">Chamar no WhatsApp</a>
+</nav>
+
+<main id="topo">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <span class="over">Terapia capilar · Itabirinha – MG</span>
+        <h1><span class="ln"><span>Autoestima</span></span><span class="ln"><span>começa pelo</span></span><span class="ln"><span><i>cuidado.</i></span></span></h1>
+        <p class="lead">Um espaço pra você desacelerar e cuidar de si: terapia capilar, head spa, unhas, massagem e maquiagem, tudo num só lugar.</p>
+        <div class="actions">
+          <a class="btn" href="#agendar">Agendar horário</a>
+          <a class="btn line" href="#servicos">Conhecer serviços</a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <img class="leaf l1" data-s=".18" src="https://images.unsplash.com/photo-1678902439117-ea4268c7661b?auto=format&fit=crop&w=500&q=70" alt="" aria-hidden="true">
+        <div class="frame"><img id="heroImg" src="https://images.unsplash.com/photo-1564141696939-9eb6e957ccfc?auto=format&fit=crop&w=900&h=1200&q=80" alt="Mulher com cabelos cacheados volumosos" fetchpriority="high"></div>
+        <svg class="seal" viewBox="0 0 132 132" aria-hidden="true"><defs><path id="circ" d="M66 66 m-52 0 a52 52 0 1 1 104 0 a52 52 0 1 1 -104 0"/></defs><circle cx="66" cy="66" r="64" fill="var(--ivory)"/><text><textPath href="#circ">beauty · wellness · autoestima · </textPath></text></svg>
+        <div class="seal-dot" aria-hidden="true"><i>RM</i></div>
+        <img class="leaf l2" data-s="-.12" src="https://images.unsplash.com/photo-1533038590840-1cde6e668a91?auto=format&fit=crop&w=400&q=70" alt="" aria-hidden="true">
+      </div>
+    </div>
+  </section>
+
+  <div class="ribbon" aria-hidden="true"><div class="ribbon-track" id="ribbon"></div></div>
+
+  <!-- SERVIÇOS -->
+  <section id="servicos">
+    <div class="wrap">
+      <div class="head" data-reveal>
+        <div><span class="over">Serviços</span><h2>Cuidado de <i>dentro pra fora</i></h2></div>
+        <p>Do couro cabeludo às unhas, cada atendimento é feito com calma, no seu tempo.</p>
+      </div>
+      <ul class="svc" id="svc"></ul>
+    </div>
+  </section>
+  <div class="peek" id="peek" aria-hidden="true"><img id="peekImg" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt=""></div>
+
+  <!-- RITUAL -->
+  <section class="ritual" id="ritual">
+    <div class="pin">
+      <div class="wrap r-grid">
+        <div class="r-photos" id="rPhotos"></div>
+        <div class="r-copy">
+          <span class="over">O ritual</span>
+          <h2>Head spa, <i>passo a passo</i></h2>
+          <ol class="r-steps" id="rSteps"></ol>
+          <div class="dots" id="rDots"></div>
+          <p class="r-note">As etapas são personalizadas na avaliação, de acordo com o seu cabelo e couro cabeludo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="studio">
+    <div class="wrap about">
+      <div class="ph" data-reveal><img id="aboutImg" loading="lazy" src="https://images.unsplash.com/photo-1581182800629-7d90925ad072?auto=format&fit=crop&w=900&h=1100&q=78" alt="Mulher relaxada de olhos fechados"></div>
+      <div data-reveal>
+        <span class="over">O studio</span>
+        <h2>Especialistas em <i>autoestima</i> e bem-estar</h2>
+        <p>O Studio Raquel Melo nasceu da terapia capilar: olhar o cabelo a partir da raiz, com diagnóstico, cuidado e paciência.</p>
+        <p>Com o tempo, o studio ganhou unhas, massagem e maquiagem, pra você sair renovada por completo, sem pressa e sem correria.</p>
+        <div class="pillars">
+          <div><b>Escuta</b><span>Cada atendimento começa entendendo você.</span></div>
+          <div><b>Ritual</b><span>Etapas pensadas pra relaxar e cuidar.</span></div>
+          <div><b>Resultado</b><span>Acompanhamento pra manter o cuidado em casa.</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AGENDAR -->
+  <section id="agendar" style="padding-top:20px">
+    <div class="wrap">
+      <div class="book" data-reveal>
+        <div>
+          <span class="over">Agendamento</span>
+          <h2>Reserve seu <i>momento</i></h2>
+          <p>Escolha o serviço e o melhor dia. A mensagem chega prontinha no WhatsApp do studio, e a confirmação do horário é feita por lá.</p>
+        </div>
+        <form class="form" id="bookForm" novalidate>
+          <div class="field"><fieldset><legend>Serviço</legend><div class="pick" id="pickSvc"></div></fieldset></div>
+          <div class="row2">
+            <div class="field"><label for="fName">Seu nome</label><input type="text" id="fName" placeholder="Como podemos te chamar?" autocomplete="given-name"></div>
+            <div class="field"><label for="fDate">Dia de preferência</label><input type="date" id="fDate"></div>
+          </div>
+          <div class="field"><fieldset><legend>Período</legend><div class="pick" id="pickPer">
+            <label><input type="radio" name="per" id="per-m" value="manhã" checked><span>Manhã</span></label>
+            <label><input type="radio" name="per" id="per-t" value="tarde"><span>Tarde</span></label>
+            <label><input type="radio" name="per" id="per-q" value="qualquer horário"><span>Tanto faz</span></label>
+          </div></fieldset></div>
+          <button class="btn" type="submit"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.2c0-.1-.2-.2-.5-.3Z"/></svg>Enviar pelo WhatsApp</button>
+          <small id="formMsg">Nenhum dado fica salvo no site. Tudo vai direto pra conversa no WhatsApp.</small>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section style="padding-top:10px">
+    <div class="wrap contact">
+      <div class="box" data-reveal>
+        <span class="over">Onde estamos</span>
+        <h3>Venha nos visitar</h3>
+        <div class="facts">
+          <div class="fact"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><p style="margin:0"><b>Av. Getúlio Vargas, 669</b><span>Itabirinha – MG · <span style="white-space:nowrap">35280-000</span></span></p></div>
+          <div class="fact"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span><p style="margin:0"><b><span id="phone">(33) 98854-2194</span><button class="copy" id="copyPhone" type="button">Copiar</button></b><span>WhatsApp</span></p></div>
+          <div class="fact"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><p style="margin:0"><b>Atendimento com hora marcada</b><span>Combine seu horário pelo WhatsApp</span></p></div>
+        </div>
+        <div class="actions">
+          <a class="btn sage" href="https://wa.me/5533988542194?text=Ol%C3%A1%2C%20Raquel!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio." target="_blank" rel="noopener">Chamar no WhatsApp</a>
+          <a class="btn line" href="https://www.google.com/maps/search/?api=1&query=Studio%20Raquel%20Melo%20Itabirinha" target="_blank" rel="noopener">Como chegar</a>
+        </div>
+      </div>
+      <div class="box insta" data-reveal>
+        <img src="https://images.unsplash.com/photo-1533038590840-1cde6e668a91?auto=format&fit=crop&w=400&q=60" alt="" aria-hidden="true">
+        <div>
+          <span class="over" style="color:#dfe6d8">Instagram</span>
+          <p class="big" style="margin:12px 0 12px">@studioraquelmelo</p>
+          <p>Mais de 1.600 pessoas já acompanham o dia a dia do studio, com dicas de cuidado capilar, novidades e agenda.</p>
+        </div>
+        <a class="btn" href="https://www.instagram.com/studioraquelmelo/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>Seguir no Instagram</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span><b style="font-family:var(--f-display);font-style:italic;font-weight:500;font-size:1.2rem;color:var(--cocoa)">Studio Raquel Melo</b> · Beauty &amp; Wellness</span>
+    <span>Av. Getúlio Vargas, 669 · Itabirinha – MG</span>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/5533988542194?text=Ol%C3%A1%2C%20Raquel!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio." target="_blank" rel="noopener" aria-label="Chamar no WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.2c0-.1-.2-.2-.5-.3Z"/></svg></a>
+
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script>
+(function(){
+document.documentElement.classList.add('js');
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const fine=matchMedia('(pointer:fine)').matches;
+const U=(id,w,h,q)=>`https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}${h?`&h=${h}`:''}&q=${q||78}`;
+const PHONE='5533988542194';
+const clamp=(v,a,b)=>Math.min(b,Math.max(a,v));
+
+let lenis=null;
+if(!reduce&&window.Lenis){lenis=new Lenis({duration:1.4,smoothWheel:true});(function raf(t){lenis.raf(t);requestAnimationFrame(raf)})(performance.now());window.__lenis=lenis}
+const menuBtn=document.getElementById('menuBtn');
+function closeMenu(){document.body.classList.remove('menu-open');menuBtn.setAttribute('aria-expanded','false');lenis&&lenis.start()}
+menuBtn.addEventListener('click',()=>{const o=!document.body.classList.contains('menu-open');document.body.classList.toggle('menu-open',o);menuBtn.setAttribute('aria-expanded',o);if(lenis)o?lenis.stop():lenis.start()});
+function goTo(id){const el=document.querySelector(id);if(!el)return;const y=el.getBoundingClientRect().top+scrollY-(id==='#ritual'?0:80);lenis?lenis.scrollTo(y):scrollTo({top:y,behavior:reduce?'auto':'smooth'})}
+document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const id=a.getAttribute('href');if(id.length<2)return;e.preventDefault();closeMenu();goTo(id)}));
+
+/* faixa */
+const rb=document.getElementById('ribbon');const words=['Terapia capilar','Head spa','Infusão de ativos','Realinhamento','Nail','Massagem','Make'];
+const g='<div class="rg">'+words.map(w=>`<span>${w}</span><i>✦</i>`).join('')+'</div>';rb.innerHTML=g+g+g;
+
+/* serviços */
+const S=[
+ ['Terapia capilar','Avaliação do couro cabeludo e tratamento pensado pro seu tipo de cabelo.','1757066033606-b9552acb2dd0'],
+ ['Head spa','Lavagem, massagem relaxante e cuidado profundo, como um ritual.','1634449571010-02389ed0f9b0'],
+ ['Infusão de ativos','Ativos aplicados pra nutrir e fortalecer os fios.','1573461160327-b450ce3d8e7f'],
+ ['Realinhamento','Fios alinhados, com mais leveza e brilho.','1554519934-e32b1629d9ee'],
+ ['Nail','Unhas bem cuidadas, do básico ao detalhe.','1612887390768-fb02affea7a6'],
+ ['Massagem','Um tempo pro corpo soltar a tensão do dia.','1519823551278-64ac92734fb1'],
+ ['Make','Maquiagem pra ocasiões especiais, realçando quem você é.','1709477542149-f4e0e21d590b']
+];
+const svc=document.getElementById('svc'),peek=document.getElementById('peek'),peekImg=document.getElementById('peekImg');
+svc.innerHTML=S.map(s=>`<li data-reveal><a href="https://wa.me/${PHONE}?text=${encodeURIComponent('Olá, Raquel! Gostaria de saber mais sobre: '+s[0])}" target="_blank" rel="noopener" data-img="${U(s[2],480,640,78)}"><img class="thumb" loading="lazy" src="${U(s[2],200,260,70)}" alt=""><h3>${s[0]}</h3><p>${s[1]}</p><span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>`).join('');
+// pré-carrega as fotos do hover
+if(fine)S.forEach(s=>{const i=new Image();i.src=U(s[2],480,640,78)});
+let px=0,py=0,tx=0,ty=0,peeking=false;
+svc.querySelectorAll('a').forEach(a=>{a.addEventListener('mouseenter',()=>{if(!fine)return;peekImg.src=a.dataset.img;peek.classList.add('on');peeking=true});a.addEventListener('mouseleave',()=>{peek.classList.remove('on');peeking=false})});
+addEventListener('mousemove',e=>{tx=e.clientX+150;ty=e.clientY});
+(function follow(){px+=(tx-px)*.14;py+=(ty-py)*.14;if(peeking)peek.style.left=px+'px',peek.style.top=py+'px';requestAnimationFrame(follow)})();
+
+/* ritual */
+const R=[
+ ['Escuta e avaliação','Conversa sobre a rotina e análise do couro cabeludo e dos fios.','1757066033606-b9552acb2dd0'],
+ ['Limpeza','Lavagem cuidadosa pra preparar o couro cabeludo.','1634449571010-02389ed0f9b0'],
+ ['Massagem relaxante','Movimentos lentos pra aliviar a tensão e ativar a circulação.','1706795034830-de41aee06afa'],
+ ['Ativos e tratamento','Aplicação dos produtos indicados pro seu cabelo.','1573461160327-b450ce3d8e7f'],
+ ['Finalização','Fios leves, perfumados e orientação pro cuidado em casa.','1564141696939-9eb6e957ccfc']
+];
+const rPhotos=document.getElementById('rPhotos'),rSteps=document.getElementById('rSteps'),rDots=document.getElementById('rDots');
+rPhotos.innerHTML=R.map((r,i)=>`<img class="${i?'':'on'}" src="${U(r[2],800,1000,78)}" alt="${r[0]}" ${i>1?'loading="lazy"':''}>`).join('');
+rSteps.innerHTML=R.map((r,i)=>`<li class="${i?'':'on cur'}"><span class="n">${String(i+1).padStart(2,'0')}</span><div><b>${r[0]}</b><span>${r[1]}</span></div></li>`).join('');
+rDots.innerHTML=R.map((r,i)=>`<i class="${i?'':'on'}"></i>`).join('');
+const rImgs=[...rPhotos.children],rLis=[...rSteps.children],rDs=[...rDots.children];let rCur=0;
+function setR(i){if(i===rCur)return;rCur=i;rImgs.forEach((e,k)=>e.classList.toggle('on',k===i));rLis.forEach((e,k)=>{e.classList.toggle('on',k<=i);e.classList.toggle('cur',k===i)});rDs.forEach((e,k)=>e.classList.toggle('on',k===i))}
+
+/* agendamento */
+const pickSvc=document.getElementById('pickSvc');
+pickSvc.innerHTML=S.map((s,i)=>`<label><input type="radio" name="svc" id="svc-${i}" value="${s[0]}" ${i===0?'checked':''}><span>${s[0]}</span></label>`).join('');
+const fDate=document.getElementById('fDate');const t=new Date();t.setDate(t.getDate()+1);fDate.min=new Date().toISOString().slice(0,10);
+document.getElementById('bookForm').addEventListener('submit',e=>{e.preventDefault();
+  const sv=document.querySelector('input[name=svc]:checked').value,per=document.querySelector('input[name=per]:checked').value,name=document.getElementById('fName').value.trim();
+  let dt='';if(fDate.value){const[y,m,d]=fDate.value.split('-');dt=` no dia ${d}/${m}`}
+  const msg=`Olá, Raquel! ${name?`Meu nome é ${name}. `:''}Gostaria de agendar *${sv}*${dt}, de preferência ${per==='qualquer horário'?'em qualquer horário':'pela '+per}. Tem horário disponível?`;
+  const url=`https://wa.me/${PHONE}?text=${encodeURIComponent(msg)}`;
+  const a=document.createElement('a');a.href=url;a.target='_blank';a.rel='noopener';document.body.appendChild(a);a.click();a.remove();
+  document.getElementById('formMsg').textContent='Abrindo o WhatsApp com a sua mensagem…'});
+
+/* copiar */
+document.getElementById('copyPhone').addEventListener('click',function(){const b=this;const ok=()=>{b.textContent='Copiado ✓';setTimeout(()=>b.textContent='Copiar',1600)};
+  const s2=()=>{const r=document.createRange();r.selectNodeContents(document.getElementById('phone'));const s=getSelection();s.removeAllRanges();s.addRange(r)};
+  navigator.clipboard?navigator.clipboard.writeText('33988542194').then(ok,s2):s2()});
+
+/* reveal */
+if(!reduce){const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.remove('pre');io.unobserve(e.target)}}),{threshold:.1});
+  document.querySelectorAll('[data-reveal]').forEach(r=>{if(r.getBoundingClientRect().top>innerHeight*.95){r.classList.add('pre');io.observe(r)}})}
+
+/* rolagem */
+const hdr=document.getElementById('hdr'),heroImg=document.getElementById('heroImg'),leaves=[...document.querySelectorAll('.leaf')],rit=document.getElementById('ritual'),aboutImg=document.getElementById('aboutImg');
+function update(){
+  const y=scrollY,vh=innerHeight;hdr.classList.toggle('solid',y>20);
+  if(!reduce){heroImg.style.transform=`scale(${1.04+Math.min(y,700)/6000}) translateY(${Math.min(y,700)*.05}px)`;
+    leaves.forEach(l=>{const s=+l.dataset.s;l.style.transform=`translateY(${-Math.min(y,800)*s}px) rotate(${y*s*.04}deg)${l.classList.contains('l2')?' scaleX(-1)':''}`});
+    rb.style.transform=`translate3d(${-((y*.35)%(rb.firstElementChild.offsetWidth||1))}px,0,0)`;
+    const ar=aboutImg.parentElement.getBoundingClientRect();if(ar.bottom>0&&ar.top<vh){const q=(ar.top+ar.height)/(vh+ar.height);aboutImg.style.transform=`translate3d(0,${(q-.5)*-10}%,0)`}}
+  const r=rit.getBoundingClientRect(),tot=r.height-vh,p=reduce?0:clamp(-r.top/Math.max(1,tot),0,.999);
+  if(!reduce)setR(Math.floor(p*R.length));
+}
+let tick=false;addEventListener('scroll',()=>{if(!tick){tick=true;requestAnimationFrame(()=>{update();tick=false})}},{passive:true});
+addEventListener('resize',update);update();
+})();
+</script>
+</body>
+</html>
